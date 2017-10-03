@@ -46311,7 +46311,8 @@ module.exports = About;
 var React = require('react');
 
 var AuthorList = React.createClass({displayName: "AuthorList",
-	propTypes: {
+	propTypes: {	// We force to pass in an array to 
+		//aAuthorList component to fill authors array in authorPage
 		authors: React.PropTypes.array.isRequired
 	},
 

@@ -3,7 +3,8 @@
 var React = require('react');
 
 var AuthorList = React.createClass({
-	propTypes: {
+	propTypes: {	// We force to pass in an array to 
+		//aAuthorList component to fill authors array in authorPage
 		authors: React.PropTypes.array.isRequired
 	},
 
