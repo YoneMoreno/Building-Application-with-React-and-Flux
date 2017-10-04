@@ -49687,6 +49687,13 @@ var React = require('react');
 var Input = require('../common/textInput');
 
 var AuthorForm = React.createClass({displayName: "AuthorForm",
+propTypes: {
+		author:	React.PropTypes.object.isRequired,
+		onSave:	React.PropTypes.func.isRequired,
+		onChange: React.PropTypes.func.isRequired,
+		errors: React.PropTypes.object
+	},
+
 
 	render: function(){
 		return (
@@ -49835,6 +49842,7 @@ authorFormIsValid: function() {
 		this.setState({errors: this.state.errors});
 		return formIsValid;
 	},
+
 
 
 	saveAuthor: function(evemt){
