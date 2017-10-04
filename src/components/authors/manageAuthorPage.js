@@ -28,6 +28,15 @@ var ManageAuthorPage = React.createClass({
 		};
 	},
 
+	componentWillMount: function() {
+		var authorId = this.props.params.id; //url access
+
+		if (authorId) {
+			this.setState({author: AuthorApi.getAuthorById(authorId) });
+		}
+	},
+
+
 
 	setAuthorState: function(event){
 		this.setState({dirty: true});
